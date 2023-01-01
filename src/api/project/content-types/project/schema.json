@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "portal": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::portal.portal",
+      "mappedBy": "project"
+    },
+    "api": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::api.api",
+      "mappedBy": "project"
+    },
+    "app": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::app.app",
+      "inversedBy": "project"
+    }
+  }
+}

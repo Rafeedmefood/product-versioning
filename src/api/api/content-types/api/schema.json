@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "apis",
+  "info": {
+    "singularName": "api",
+    "pluralName": "apis",
+    "displayName": "Api",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "project": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project",
+      "inversedBy": "api"
+    },
+    "Prod": {
+      "type": "component",
+      "repeatable": false,
+      "component": "information.meta"
+    },
+    "Staging": {
+      "type": "component",
+      "repeatable": false,
+      "component": "information.meta"
+    }
+  }
+}

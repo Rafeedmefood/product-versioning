@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "portals",
+  "info": {
+    "singularName": "portal",
+    "pluralName": "portals",
+    "displayName": "Portal",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "project": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project",
+      "inversedBy": "portal"
+    },
+    "Staging": {
+      "type": "component",
+      "repeatable": false,
+      "component": "information.meta"
+    },
+    "Prod": {
+      "type": "component",
+      "repeatable": false,
+      "component": "information.meta"
+    }
+  }
+}
